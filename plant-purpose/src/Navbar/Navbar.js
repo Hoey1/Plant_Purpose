@@ -9,10 +9,10 @@ import "../App.css";
 const NavbarStyled = styled.div`
   background-color: white;
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 96px;
   left: 0px;
-  top: 0px;
+  top: 5px;
 `;
 
 export const SignUpButton = styled.div`
@@ -29,7 +29,6 @@ export const SignUpButton = styled.div`
   bottom: 29.17%;
   font-family: Poppins;
   font-style: normal;
-  font-weight: bold;
   font-size: 14px;
   line-height: 21px;
   display: flex;
@@ -52,7 +51,6 @@ export const SignInButton = styled.div`
   right: 18.89%;
   font-family: Poppins;
   font-style: normal;
-  font-weight: bold;
   font-size: 14px;
   line-height: 21px;
   display: flex;
@@ -69,8 +67,4 @@ export function Navbar() {
       <SignUpButton>Sign Up</SignUpButton>
     </NavbarStyled>
   );
-}
-
-{
-  /* <img src={logo} className="App-logo" alt="logo" /> */
 }
