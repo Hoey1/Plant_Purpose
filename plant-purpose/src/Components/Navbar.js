@@ -5,6 +5,7 @@ import { bone } from "../Styles/colors";
 import { trout } from "../Styles/colors";
 import logo from "../logo.svg";
 import "../App.css";
+import { useHistory } from "react-router-dom";
 
 const NavbarStyled = styled.div`
   background-color: white;
@@ -60,11 +61,19 @@ export const SignInButton = styled.div`
 `;
 
 export function Navbar() {
+  const history = useHistory();
+  const navigateToSignIn = () => history.push("/SignIn");
+  const navigateToSignUp = () => history.push("/SignUp");
+
   return (
     <NavbarStyled>
       <img src={logo} className="Plant-logo" alt="logo" />
-      <SignInButton>Sign In</SignInButton>
-      <SignUpButton>Sign Up</SignUpButton>
+      <SignInButton right onClick={navigateToSignIn}>
+        Sign In
+      </SignInButton>
+      <SignUpButton right onClick={navigateToSignUp}>
+        Sign Up
+      </SignUpButton>
     </NavbarStyled>
   );
 }
